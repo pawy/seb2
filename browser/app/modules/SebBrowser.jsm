@@ -175,6 +175,7 @@ this.SebBrowser = {
 		var interfaceRequestor = win.XulLibBrowser.docShell.QueryInterface(Ci.nsIInterfaceRequestor);
 		var webProgress = interfaceRequestor.getInterface(Ci.nsIWebProgress);
 		webProgress.addProgressListener(win.XULBrowserWindow, Ci.nsIWebProgress.NOTIFY_ALL);
+		base.showToolbar(win);
 		sl.debug("initBrowser");
 	},
 	
@@ -330,5 +331,24 @@ this.SebBrowser = {
 			return false;
 		}
 		win.XulLibBrowser.webNavigation.goForward();
-	} 
+	},
+	
+	showToolbar: function(win) {
+		if (sw.getWinType(win)!= "main") {
+			return;
+		}
+		var enableToolbar = su.getConfig("enableBrowserWindowToolbar","boolean",false);
+		sl.debug("enableToolbar:" + enableToolbar);
+		var toolbox = win.document.getElementById("toolBox");
+		if (!toolbox) {
+			sl.err("no toolbox in seb.xul defined!");
+			return;
+		}
+		if (enableToolbar) {
+			toolbox.style.display = "block";
+		}
+		else {
+			toolbox.style.display = "none";
+		}
+	}
 }

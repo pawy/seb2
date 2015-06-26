@@ -68,6 +68,8 @@
 "enableZoomPage":true,
 "enableZoomText":false,
 "allowSpellCheck":false,
+"enableBrowserWindowToolbar":false,
+"enableLogging":false,
 
 "DESCRIPTION":"*** the config params above are already migrated ****",
 
@@ -77,19 +79,16 @@
 "enableURLContentFilter":false,
 "downloadPDFFiles":false,
 "allowDownUploads":false,
-"hideBrowserWindowToolbar":true,
 "enableURLFilter":false,
 "chooseFileToUploadPolicy":0,
 "hashedAdminPassword":"5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d85e",
 "showMenuBar":true,
 "newBrowserWindowByScriptBlockForeign":false,
-"enableLogging":false,
 "logDirectoryWIN":"",
 "monitorProcesses":false,
 "downloadDirectoryWin":"",
 "downloadAndOpenSebConfig":true,
 "newBrowserWindowByLinkBlockForeign":false,
-"enableBrowserWindowToolbar":true,
 "blockPopUpWindows":false,
 "openDownloads":false
 }
